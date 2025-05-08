@@ -15,7 +15,6 @@ header{
 	z-index: 1000;
 	background-color: rgb(255, 255, 255);
     color: rgb(4, 163, 44);
-	background-image: url(imagens/glyph_yellow.svg);
 	background-size: 30px;
 	background-repeat: no-repeat;
 	background-position:left;
@@ -23,7 +22,9 @@ header{
 	background-position-y: 10px;
 	width: auto;
 }
-
+header img{
+    size: 10px;
+}
 header a{
     text-decoration: none;
     color: rgb(4, 163, 44);
@@ -69,6 +70,13 @@ article{
 	height: 760px;
 	display: flex;
 	gap:20px;
+}
+article img{
+    width: 100%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 article div{
