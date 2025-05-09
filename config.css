@@ -6,6 +6,8 @@ body {
 	color: white;
 	margin: 0;
     top:0;
+	max-width: 100%;
+    overflow-x: hidden;
 }
 
 header{
@@ -106,7 +108,7 @@ article:nth-child(2) div:nth-child(2){
 }
 
 article:nth-child(2) a{
-	border: 5px solid rgb(255, 255, 0);
+	border: 4px solid rgb(255, 255, 0);
 	color: white;
 	font-weight: bolder;
 	text-decoration: none;	
@@ -169,16 +171,18 @@ footer{
 	margin-bottom: auto;
 }
 footer div{
-	margin: 90px;
+	margin: 90px 0 90px 90px 90px;
+	width: 20%;
 }
 
 footer ul{
+	top:0;
 	list-style-type: none;
 	padding-left: 0px;
 }
 
 footer li{
-	margin-top:10px ;
+	margin-top:10px;
 	font-size: 14px;
 }
 
