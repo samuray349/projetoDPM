@@ -21,6 +21,7 @@ header{
 	background-position-x: 30px;
 	background-position-y: 10px;
 	width: auto;
+	box-shadow: 0 6px 0 0 rgba(0,0,0,0.1);
 }
 header img{
     size: 10px;
@@ -76,8 +77,10 @@ article img{
     display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
-}
+  margin-top: 50px;
+  border-radius: 5%;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite;}
 
 article div{
 	display: inline-block;
@@ -103,14 +106,22 @@ article:nth-child(2) div:nth-child(2){
 }
 
 article:nth-child(2) a{
-	background-color: white;
-	color: black;
+	border: 5px solid rgb(255, 255, 0);
+	color: white;
+	font-weight: bolder;
 	text-decoration: none;	
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-size: 15px;
+	transition: all 0.3s;
+}
+
+article:nth-child(2) a:hover{
+	outline: 0 none;
+	background-color: rgb(255, 255, 0);
+	color: black;
 }
 
 article:nth-child(2) p{
@@ -180,3 +191,23 @@ footer a{
 	text-decoration: none;
 	color:white;
 }
+
+.highlight_btn{
+	background: linear-gradient(90deg, rgb(57, 206, 92) 50%, rgba(16, 185, 129, 1) 100%);
+	color: white;
+	padding:10px 10px 10px 10px ;
+	border-radius: 5%;
+}
+
+
+@keyframes float {
+	0% {
+	  transform: translateY(0px);
+	}
+	50% {
+	  transform: translateY(-15px);
+	}
+	100% {
+	  transform: translateY(0px);
+	}
+  }
