@@ -304,6 +304,7 @@ header h1{
     min-height: 100vh;
     padding: 2rem;
     color: #334155;
+    background-color: rgb(128 128 128 / 14%);
 }
         
 .container {
@@ -385,4 +386,135 @@ header h1{
     font-size: 15px;
     transition: all 0.3s;
 }
+.secao-titulo {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+}
 
+.titulo-principal {
+    font-size: 2rem;
+    color: #065f46; /* Verde escuro */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: #334155; /* Azul acinzentado */
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ameaca-secao {
+    padding: 2rem;
+}
+
+.ameaca-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os cartões */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.ameaca-cartao {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    transition: transform 0.3s;
+    color: #1e293b;
+}
+
+.ameaca-cartao:hover {
+    transform: translateY(-5px);
+}
+
+.ameaca-cabecalho {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.ameaca-icone {
+    font-size: 1.8rem;
+}
+
+.ameaca-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #047857;
+    margin: 0;
+}
+
+.ameaca-descricao {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #475569; 
+}
+.ameaca-solucao{
+    padding-left:10px;
+    border-radius: 10px;
+}
+
+.ameaca-subtitulo-solucao {
+    font-weight: bold;
+    color: #dc2626;
+    margin-bottom: 0.25rem;
+}
+
+.ameaca-descricao-solucao {
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.vermelho{
+    color:red;
+}
+.vermelho-bg{
+    background-color: rgb(255 0 0 / 6%);
+}
+.verde{
+    color:green;
+}
+.verde-bg{
+    background-color: rgb(0 128 0 /6%);
+}
+.azul{
+    color: rgb(59, 130, 246);
+}
+.azul-bg{
+    background-color: rgb(59 130 246/6%);
+}
+.roxo{
+    color: rgb(168, 85, 247);
+}
+.roxo-bg{
+    background-color: rgb(168 85 247/6%);
+}
+
+.laranja{
+    color: rgb(249, 115, 22);
+}
+.laranja-bg{
+    background-color: rgb(249 115 22/6%);
+}
+
+.amarelo{
+    color: rgb(234,179,8);
+}
+.amarelo-bg{
+    background-color: rgb(234 179 8/6%);
+}
+
+.rosa{
+    color: rgb(236, 72, 153);
+}
+.rosa-bg{
+    background-color: rgb(236 72 153/6%);
+}
