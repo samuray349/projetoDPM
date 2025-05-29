@@ -22,7 +22,7 @@
 		<div class="navbotao">
 			<a href="#">Início</a>
 			<a href="#animais">Animais</a>
-            <a href="#">Causas</a>
+            <a href="#causas">Causas</a>
 			<a href="#" class="highlight_btn">Doe agora</a>
 		</div>
 	</header>
@@ -108,7 +108,7 @@
 			
 		</div>
     </article>
-	<section class="secao-titulo">
+	<section class="secao-titulo" id="causas">
 		<h2 class="titulo-principal">Principais Ameaças à Vida Selvagem</h2>
 		<p class="subtitulo">Entenda as principais causas da extinção de espécies e como estamos combatendo<br>cada uma delas</p>
 	</section>
@@ -211,6 +211,57 @@
 			</div>
 		</div>
 	</section>
+<section class="secao-doacoes">
+  <h2 class="titulo">Faça a diferença com a sua Doação</h2>
+  <p class="subtitulo">Cada contribuição nos ajuda a proteger espécies ameaçadas e seus habitats. Escolha abaixo como deseja ajudar:</p>
+
+  <div class="cartoes-doacoes">
+    <!-- Doação Única -->
+    <div class="cartao verde">
+      <i class="fas fa-hand-holding-heart icone"></i>
+      <h3>Doação Única</h3>
+      <p>Contribua com qualquer valor para nossos projetos de conservação.</p>
+      <div class="valores">
+        <button>50€</button>
+        <button>100€</button>
+        <button>200€</button>
+        <button>500€</button>
+      </div>
+      <input type="number" placeholder="0€" class="input-doacao">
+      <button class="botao">Doar Agora</button>
+    </div>
+
+    <!-- Doação Mensal -->
+    <div class="cartao destaque">
+      <i class="fas fa-calendar-check icone"></i>
+      <h3>Doação Mensal</h3>
+      <p>Torne-se um Guardião da Vida Selvagem com uma contribuição recorrente.</p>
+      <div class="valores">
+        <button>30€</button>
+        <button class="ativo">50€</button>
+        <button>100€</button>
+      </div>
+      <input type="number" placeholder="0€" class="input-doacao">
+      <button class="botao">Tornar-se Guardião</button>
+    </div>
+
+    <!-- Apadrinhamento -->
+    <div class="cartao verde">
+      <i class="fas fa-heart icone"></i>
+      <h3>Apadrinhe um Animal</h3>
+      <p>Escolha uma espécie para apadrinhar e receba atualizações regulares.</p>
+      <select class="select-animal">
+        <option>Escolha um animal</option>
+        <option>Lince-ibérico</option>
+        <option>Estrelinha de poupa</option>
+        <option>Tartaruga comuml</option>
+      </select>
+      <input type="number" placeholder="0€" class="input-doacao">
+      <button class="botao">Apadrinhar</button>
+    </div>
+  </div>
+</section>
+
 
 
 	<footer class="footer">

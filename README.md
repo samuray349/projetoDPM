@@ -9,6 +9,8 @@ Lucas Reis
 ## Link
 https://samuray349.github.io/projetoDPM/
 
+![alt text](https://github.com/samuray349/projetoDPM/blob/main/imagens/qrCode.svg?raw=true)
+
 # Design
 
 ### Componentes da página
