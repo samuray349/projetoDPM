@@ -484,14 +484,14 @@ i:hover{
   background-color: #f9f9f9;
 }
 
-.titulo {
+.secao-doacoes .titulo {
   color: #065f46;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.subtitulo {
+.secao-doacoes .subtitulo {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 3rem;
