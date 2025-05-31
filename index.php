@@ -10,23 +10,9 @@
 
 </head>
 <body>
-    
-	<header>
-		<div class="imglogo">
-			<img src="imagens/logo.png" alt="">
-			<h1><a href="https://samuray349.github.io/projetoDPM/">Naturalia</a></h1>
-		</div>
-		<nav>
-			
-		</nav>
-		<div class="navbotao">
-			<a href="https://samuray349.github.io/projetoDPM/#">Início</a>
-			<a href="https://samuray349.github.io/projetoDPM/#animais">Animais</a>
-            <a href="https://samuray349.github.io/projetoDPM/#causas">Causas</a>
-			<a href="https://samuray349.github.io/projetoDPM/#doar" class="highlight_btn">Doe agora</a>
-		</div>
-	</header>
-
+    <?php
+	require("header.html");
+	?>
 	<article class="artigo1">
 		<div class="lado1">
 			<h2 class="titulo">A proteger os nossos <span>tesouros</span> naturais</h2>
