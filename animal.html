@@ -6,7 +6,13 @@
   <title>Animal em Perigo</title>
   <link rel="stylesheet" href="config.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ <style>
+    body {
 
+      color: black;
+    }
+
+  </style>
 </head>
 <body onload="carregarMenu()">
 
@@ -48,15 +54,35 @@
             <p><strong>Descrição:</strong> ${animal.descricao.desc_basica}</p>
             <p><strong>Características Físicas:</strong> ${animal.descricao.caracteristicas_fisicas}</p>
             <p><strong>Comportamento:</strong> ${animal.descricao.comportamento}</p>
-            <h3>Ameaças à Sobrevivência</h3>
-            ${animal.ameacas_sobrevivencia.map(a => `
-              <div class="ameaca">
-                <i class="fas ${a.icone}"></i><span><strong>${a.titulo}:</strong> ${a.descricao}</span>
-              </div>
-            `).join('')}
             <h3>Esforços de Conservação</h3>
             <p><strong>Proteção do Habitat:</strong> ${animal.esforcos_conservacao.protecao_habitat}</p>
             <p><strong>Combate à Caça:</strong> ${animal.esforcos_conservacao.combate_caca}</p>
+
+
+            <section class="ameaca-secao">
+              <div class="ameaca-lista">
+
+                ${animal.ameacas_sobrevivencia.map(a => `
+                <div class="ameaca-cartao">
+                <div class="ameaca-cabecalho ${a.cor}">
+                  <i class="fa-solid ${a.icone}"></i>
+                  <h3 class="ameaca-titulo">${a.titulo}</h3>
+                </div>
+                <p class="ameaca-descricao">
+                  ${a.descricao}
+                </p>
+                <div class="ameaca-solucao ${a.cor}-bg">
+                  <h4 class="ameaca-subtitulo-solucao ${a.cor}">Nossa Solução:</h4>
+                  <p class="ameaca-descricao-solucao ${a.cor}">
+                  Criamos reservas naturais e promovemos práticas agrícolas sustentáveis que protegem a biodiversidade.
+                  </p>
+                </div>
+                </div>
+                `).join('')}
+                
+
+              </div>
+            </section>
           `;
 
           container.appendChild(div);

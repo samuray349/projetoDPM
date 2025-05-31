@@ -11,50 +11,83 @@ body {
     overflow-x: hidden;
 }
 
-header{
-	position: sticky;
-	top:0px;
-	height: 75px;
-	z-index: 1000;
-	background-color: rgb(255, 255, 255);
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 75px;
+    z-index: 1000;
+    background-color: white;
     color: rgb(4, 163, 44);
-	background-size: 30px;
-	background-repeat: no-repeat;
-	background-position:left;
-	background-position-x: 30px;
-	background-position-y: 10px;
-	width: auto;
-	box-shadow: 0 6px 0 0 rgba(0,0,0,0.1);
+    box-shadow: 0 6px 0 0 rgba(0,0,0,0.1);
+    padding: 0 20px;
 }
-header img{
-    size: 10px;
+
+.imglogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-header a{
+
+.imglogo img {
+    height: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+header a {
     text-decoration: none;
     color: rgb(4, 163, 44);
 }
 
-header nav{
-	position: absolute;
-	left:220px;
-	top:15px;
+.navbotao {
+    display: flex;
+    gap: 20px;
 }
 
-header nav a{
-	margin-left: 30px;
-
+.highlight_btn {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(4, 163, 44);
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
-
-header button{
+.menu-toggle {
+    display: none;
+    font-size: 24px;
     background: none;
-	border: 0;
-	font-size: 16px;
-    color: rgb(0, 87, 68);
+    border: none;
+    color: rgb(4, 163, 44);
 }
 
-header h1{
-    margin:0 0 0 0;
+/* Responsivo para telemóveis */
+@media (max-width: 768px) {
+    .navbotao {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .navbotao.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 .themed-footer {
@@ -635,4 +668,18 @@ i:hover{
 }
 .rosa-bg{
     background-color: rgb(236 72 153/6%);
+}
+
+.cinza{
+    color: rgb(70, 70, 70);
+}
+.cinza-bg{
+    background-color: rgb(0 0 0/6%);
+}
+
+.castanho{
+    color: rgb(117, 71, 10);
+}
+.castanho-bg{
+    background-color: rgb(117 71 10/6%);
 }
