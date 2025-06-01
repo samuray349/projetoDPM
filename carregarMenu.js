@@ -7,11 +7,11 @@ function carregarMenu() {
 			return response.text();
 			})
 			.then(html => {
-			const container = document.getElementById('header');
+			const container = document.getElementById('header1');
 			container.innerHTML = html;
 			})
 			.catch(error => {
-			const container = document.getElementById('header');
+			const container = document.getElementById('header1');
 			container.innerHTML = `<p style="color: red;">Erro ao carregar conteúdo: ${error.message}</p>`;
 			console.error(error);
 			});
