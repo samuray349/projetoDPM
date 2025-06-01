@@ -3,93 +3,144 @@
 body { 	
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-	background-color: rgb(255, 255, 255);
+	background: white;
 	color: white;
 	margin: 0;
     top:0;
 	max-width: 100%;
     overflow-x: hidden;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    height: 75px;
-    z-index: 1000;
-    background-color: white;
-    color: rgb(4, 163, 44);
-    box-shadow: 0 6px 0 0 rgba(0,0,0,0.1);
-    padding: 0 20px;
+.header-wrapper {
+  width: 100%;
+  max-width: 100%; /* ocupa toda a largura */
+  margin: 0;
+  height: 75px;
+  overflow: hidden;
+  position: relative;
 }
 
-.imglogo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo-nao-flex {
+  float: left;
+  height: 100%;
+  padding: 15px 0 15px 20px; /* apenas padding à esquerda */
+  margin: 0;
 }
 
-.imglogo img {
-    height: 40px;
+.menu-nao-flex {
+  float: right;
+  height: 100%;
+  padding: 25px 20px 0 0; /* apenas padding à direita */
+  text-align: right;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 30px;
+
+.logo-nao-flex img {
+  height: 45px;
+  vertical-align: middle;
 }
 
-header a {
-    text-decoration: none;
-    color: rgb(4, 163, 44);
+.logo-nao-flex h1 {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+  font-size: 26px;
 }
 
-.navbotao {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    bottom: 20px;
+.logo-nao-flex a {
+  color: rgb(4, 163, 44);
+  text-decoration: none;
 }
 
-.highlight_btn {
-    font-weight: bold;
-    color: white;
-    background-color: rgb(4, 163, 44);
-    padding: 8px 12px;
-    border-radius: 5px;
+.menu-nao-flex {
+  float: right;
+  height: 100%;
+  padding: 15px 15px 15px 0px;
+  text-align: right;
 }
 
+.menu-nao-flex a {
+  display: inline-block;
+  margin-left: 20px;
+  color: rgb(4, 163, 44);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-nao-flex .highlight-btn {
+  background: linear-gradient(90deg, rgb(57, 206, 92) 50%, rgba(16, 185, 129, 1) 100%);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 .menu-toggle {
-    display: none;
-    font-size: 24px;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: rgb(4, 163, 44);
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 768px) {
+  .menu-nao-flex {
+    display: block;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    width: 180px;
+    background-color: white;
+    padding: 10px 12px;
+    text-align: left;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 0 8px;
+    z-index: 1000;
+
+    /* Transição suave */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    /* Altura automática */
+    height: auto;
+  }
+
+  .menu-nao-flex.active {
+    transform: translateX(0);
+  }
+
+  .menu-nao-flex a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
     background: none;
     border: none;
+    font-size: 28px;
     color: rgb(4, 163, 44);
+    cursor: pointer;
+  }
 }
 
-/* Responsivo para telemóveis */
-@media (max-width: 850px) {
-    .navbotao {
-        position: absolute;
-        top: 75px;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-        display: none;
-    }
 
-    .navbotao.active {
-        display: flex;
-    }
 
-    .menu-toggle {
-        display: block;
-    }
+
+
+
+#spacer {
+    visibility: hidden;
+    flex-grow: 1;    
 }
 
 .themed-footer {
@@ -213,8 +264,8 @@ header a {
   }
 
 .highlight_btn{
+  color: white;
 	background: linear-gradient(90deg, rgb(57, 206, 92) 50%, rgba(16, 185, 129, 1) 100%);
-	color: white;
 	padding:10px 10px 10px 10px ;
 	border-radius: 5%;
 }
@@ -339,7 +390,7 @@ header a {
     min-height: 100vh;
     padding: 2rem;
     color: #334155;
-    background-color: rgb(128 128 128 / 14%);
+    background-color: white;
 }
         
 .container {
@@ -449,6 +500,8 @@ i:hover{
 
 .ameaca-secao {
     padding: 2rem;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 40%);
+
 }
 
 .ameaca-lista {
@@ -516,7 +569,7 @@ i:hover{
 .secao-doacoes {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f9f9f9;
+  background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 40%);
 }
 
 .secao-doacoes .titulo {
