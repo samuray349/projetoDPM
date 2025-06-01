@@ -59,7 +59,58 @@
             <p><strong>Proteção do Habitat:</strong> ${animal.esforcos_conservacao.protecao_habitat}</p>
             <p><strong>Combate à Caça:</strong> ${animal.esforcos_conservacao.combate_caca}</p>
 
+            <section class="secao-destaque">
+              <div class="conteudo-destaque">
+                <div class="texto-destaque">
+                  <h1 class="titulo-destaque">
+                    <span class="titulo-destaque verde">${animal.nome}</span>
+                  </h1>
+                  <p class="descricao-destaque">
+                    ${animal.descricao.desc_basica}
+                  </p>
+                  <div class="botoes-destaque">
+                    <a href="#" class="botao primario"><i class="fas fa-book-open"></i> Conheça a Espécie</a>
+                    <a href="#" class="botao secundario"><i class="fas fa-seedling"></i> Contribuir</a>
+                  </div>
+                </div>
 
+                <div class="imagem-destaque">
+                  <div class="quadro-imagem">
+                    <img src="https://images.trustinnews.pt/uploads/sites/5/2023/03/230308_GettyImages-1245729481.jpg" alt="${animal.nome}" class="imagem-personalizada">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="secao-caracteristicas">
+              <h2 class="titulo-caracteristicas">Características da Espécie</h2>
+              <div class="lista-caracteristicas">
+                <div class="cartao-caracteristica">
+                  <div class="icone-circulo"><i class="fas fa-ruler-vertical"></i></div>
+                  <h3>Comprimento</h3>
+                  <p class="valor">${animal.comprimento}</p>
+                  <p class="descricao">Da ponta do bico à extremidade da cauda</p>
+                </div>
+                <div class="cartao-caracteristica">
+                  <div class="icone-circulo"><i class="fas fa-weight-hanging"></i></div>
+                  <h3>Peso Médio</h3>
+                  <p class="valor">${animal.peso.machos},${animal.peso.femeas}</p>
+                  <p class="descricao">Asas com envergadura de até 1,2 metros</p>
+                </div>
+                <div class="cartao-caracteristica">
+                  <div class="icone-circulo"><i class="fas fa-clock"></i></div>
+                  <h3>Longevidade</h3>
+                  <p class="valor">50 anos</p>
+                  <p class="descricao">Pode viver até 60 anos em cativeiro</p>
+                </div>
+                <div class="cartao-caracteristica">
+                  <div class="icone-circulo"><i class="fas fa-leaf"></i></div>
+                  <h3>Dieta</h3>
+                  <p class="valor">Frugívora</p>
+                  <p class="descricao">Frutos, nozes, sementes e cocos</p>
+                </div>
+              </div>
+            </section>
             <section class="ameaca-secao">
               <div class="ameaca-lista">
 
