@@ -16,3 +16,10 @@ function carregarMenu() {
 			console.error(error);
 			});
 }
+
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.menu-nao-flex');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
