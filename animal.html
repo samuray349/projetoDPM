@@ -15,7 +15,7 @@
 
   </style>
 </head>
-<body onload="carregarMenu()">
+<body onload="carregarMenu();carregarFooter();">
 
   <div id="header1">
 
@@ -69,7 +69,7 @@
                 </div>
               </div>
             </section>
-
+            
             <section class="secao-caracteristicas">
               <h2 class="titulo-caracteristicas">Características da Espécie</h2>
               <div class="lista-caracteristicas">
@@ -138,6 +138,7 @@
       document.getElementById("listaAnimais").innerHTML = "<p>ID do animal não fornecido na URL.</p>";
     }
   </script>
+  <div id="footer1"></div>
 </body>
 <script>
   const toggleBtn = document.querySelector('.menu-toggle');
