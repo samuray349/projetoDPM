@@ -470,6 +470,7 @@ i:hover{
 .secao-titulo {
     text-align: center;
     padding: 3rem 1rem 2rem;
+    background-color: #f9fafb;
 }
 
 .titulo-principal {
@@ -559,7 +560,7 @@ i:hover{
 .secao-doacoes {
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 40%);
+  background: linear-gradient(180deg, rgb(255 255 255) 0%, #f9fafb 40%);
 }
 
 .secao-doacoes .titulo {
@@ -1123,12 +1124,13 @@ i:hover{
       justify-content: center;
       height: 100%;
       margin-top: 300px;
+      
     }
 
     .caixa-erro {
       text-align: center;
       padding: 2rem 3rem;
-      border-radius: 6px;
+      border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       border: 1px solid #e0e0e0;
       max-width: 500px;

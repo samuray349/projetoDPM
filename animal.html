@@ -38,7 +38,8 @@
         .then(animal => {
           const container = document.getElementById("listaAnimais");
           if (!animal) {
-            container.innerHTML = "<p>Animal não encontrado.</p>";
+            document.body.innerHTML='';
+          document.body.innerHTMLL = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
             return;
           }
 
@@ -179,12 +180,14 @@
           container.appendChild(div);
         })
         .catch(error => {
-          document.body.innerHTML='';
-          document.body.innerHTMLL = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+          document.body.innerHTML = '';
+          document.body.innerHTMLL = '<div class="centro"><div class="caixa-erro"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+          document.write('<script type="text/undefined">');
         });
     } else {
-      document.body.innerHTML='';
-      document.body.innerHTML = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+      document.body.innerHTML = '';
+      document.body.innerHTML = '<div class="centro"><div class="caixa-erro"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+      document.write('<script type="text/undefined">');
     }
   </script>
   
