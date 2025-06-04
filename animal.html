@@ -27,7 +27,7 @@
   <script>
     function getAnimalIdFromURL() {
       const params = new URLSearchParams(window.location.search);
-      return params.get("id"); // exemplo: ?id=animal1
+      return params.get("id");
     }
 
     const animalId = getAnimalIdFromURL();
@@ -179,10 +179,12 @@
           container.appendChild(div);
         })
         .catch(error => {
-          document.getElementById("listaAnimais").innerHTML = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+          document.body.innerHTML='';
+          document.body.innerHTMLL = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
         });
     } else {
-      document.getElementById("listaAnimais").innerHTML = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+      document.body.innerHTML='';
+      document.body.innerHTML = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
     }
   </script>
   
@@ -190,6 +192,7 @@
   <div id="footer1"></div>
 </body>
 <script>
+  carregarMenu();carregarFooter();
   window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       const toggleBtn = document.querySelector('.menu-toggle');
