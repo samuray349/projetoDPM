@@ -101,9 +101,7 @@
   <div class="container-animal">
     <h2 class="titulo-caracteristicas">Sobre ${animal.nome}</h2>
 
-    <!-- Cartões superiores -->
     <div class="grade-cartoes">
-      <!-- Descrição -->
       <div class="cartao-animal">
         <h3><span class="icone-verde">●</span> Descrição Básica</h3>
         <p>
@@ -111,15 +109,12 @@
         </p>
       </div>
 
-      <!-- Comportamento -->
       <div class="cartao-animal">
         <h3><span class="icone-verde">●</span> Comportamento</h3>
         <p>
           ${animal.descricao.comportamento}
         </p>
       </div>
-
-      <!-- Características Físicas -->
       <div class="cartao-animal">
         <h3><span class="icone-verde">●</span> Características Físicas</h3>
         <p>
@@ -127,8 +122,6 @@
         </p>
       </div>
     </div>
-
-    <!-- Cartão inferior com mapa -->
     <div class="cartao-mapa">
       <div class="texto-mapa">
         <h3><span class="icone-verde">●</span> Habitat e Localização</h3>
@@ -206,7 +199,7 @@
           navMenu.classList.toggle('active');
         });
       }
-    }, 500);
+    }, 1000);
   });
 </script>
 </html>

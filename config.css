@@ -16,7 +16,7 @@ header{
 }
 .header-wrapper {
   width: 100%;
-  max-width: 100%; /* ocupa toda a largura */
+  max-width: 100%; 
   margin: 0;
   height: 75px;
   overflow: hidden;
@@ -26,14 +26,14 @@ header{
 .logo-nao-flex {
   float: left;
   height: 100%;
-  padding: 15px 0 15px 20px; /* apenas padding à esquerda */
+  padding: 15px 0 15px 20px; 
   margin: 0;
 }
 
 .menu-nao-flex {
   float: right;
   height: 100%;
-  padding: 25px 20px 0 0; /* apenas padding à direita */
+  padding: 25px 20px 0 0; 
   text-align: right;
 }
 
@@ -475,14 +475,14 @@ i:hover{
 
 .titulo-principal {
     font-size: 2rem;
-    color: #065f46; /* Verde escuro */
+    color: #065f46;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .subtitulo {
     font-size: 1rem;
-    color: #334155; /* Azul acinzentado */
+    color: #334155; 
     line-height: 1.6;
     max-width: 700px;
     margin: 0 auto;
@@ -496,10 +496,10 @@ i:hover{
 .ameaca-lista {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza os cartões */
+    justify-content: center; 
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 0 auto; 
 }
 
 .ameaca-cartao {
@@ -731,7 +731,6 @@ i:hover{
 }
 
 
-/* Destaque principal */
 .secao-destaque {
   padding: 2rem 1rem;
   background-color: #ffffff;
@@ -824,7 +823,6 @@ i:hover{
   border-radius: 10px;
 }
 
-/* Características */
 .secao-caracteristicas {
   background-color: #f9fafb;
   padding: 3rem 1rem;
@@ -883,7 +881,6 @@ i:hover{
   font-size: 0.9rem;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .conteudo-destaque {
     flex-direction: column;
@@ -941,7 +938,6 @@ i:hover{
   margin-bottom: 1rem;
 }
 
-/* Cores temáticas por categoria */
 .cartao-fisico { border-left-color: #22d3ee; }
 .cartao-comportamento { border-left-color: #facc15; }
 .cartao-localizacao { border-left-color: #818cf8; }
@@ -1060,7 +1056,6 @@ i:hover{
   margin-top: 0.5rem;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .cartao-mapa {
     flex-direction: column;
@@ -1100,7 +1095,7 @@ i:hover{
   .iframe-responsivo {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
+  padding-bottom: 56.25%; 
   height: 0;
   height: 50px;
   width: 500px;
