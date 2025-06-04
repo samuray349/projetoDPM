@@ -232,7 +232,7 @@
     <div class="cartao destaque">
       <i class="fas fa-calendar-check icone"></i>
       <h3>Doação Mensal</h3>
-      <p>Torne-se um Guardião da Vida Selvagem com uma contribuição recorrente.</p>
+      <p>Torne-se um guardião da vida selvagem com uma contribuição recorrente.</p>
       <div class="valores">
         <button>30€</button>
         <button class="ativo">50€</button>
@@ -266,12 +266,19 @@
 
 </body>
 <script>
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.menu-nao-flex');
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.menu-nao-flex');
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+      if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+        });
+      }
+    }, 500); // pequena espera para garantir que o menu foi carregado
   });
 </script>
+
 
 </html>
