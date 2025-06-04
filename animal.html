@@ -6,6 +6,7 @@
   <title>Animal em Perigo</title>
   <link rel="stylesheet" href="config.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="imagens/logo.png">
   <script src="carregarMenu.js"></script>
  <style>
     body {
@@ -57,7 +58,7 @@
                     ${animal.descricao.desc_basica}
                   </p>
                   <div class="botoes-destaque">
-                    <a href="#" class="botao primario"><i class="fas fa-book-open"></i> Conheça a Espécie</a>
+                    <a href="#" class="botao primario"><i class="fas fa-book-open"></i> Conheça outro animais</a>
                     <a href="#" class="botao secundario"><i class="fas fa-seedling"></i> Contribuir</a>
                   </div>
                 </div>
@@ -95,6 +96,57 @@
                 </div>
               </div>
             </section>
+            <section class="secao-animal">
+  <div class="container-animal">
+    <h2 class="titulo-caracteristicas">Sobre ${animal.nome}</h2>
+
+    <!-- Cartões superiores -->
+    <div class="grade-cartoes">
+      <!-- Descrição -->
+      <div class="cartao-animal">
+        <h3><span class="icone-verde">●</span> Descrição Básica</h3>
+        <p>
+          ${animal.descricao.desc_basica}
+        </p>
+      </div>
+
+      <!-- Comportamento -->
+      <div class="cartao-animal">
+        <h3><span class="icone-verde">●</span> Comportamento</h3>
+        <p>
+          ${animal.descricao.comportamento}
+        </p>
+      </div>
+
+      <!-- Características Físicas -->
+      <div class="cartao-animal">
+        <h3><span class="icone-verde">●</span> Características Físicas</h3>
+        <p>
+          ${animal.descricao.caracteristicas_fisicas}
+        </p>
+      </div>
+    </div>
+
+    <!-- Cartão inferior com mapa -->
+    <div class="cartao-mapa">
+      <div class="texto-mapa">
+        <h3><span class="icone-verde">●</span> Habitat e Localização</h3>
+        <p class="subtitulo">Distribuição geográfica e ambiente natural</p>
+        <p>
+          ${animal.area_ocorrencia.habitat}
+          
+        </p>
+        <ul>
+          <li>${animal.area_ocorrencia.localizacao}</li>
+        </ul>
+      </div>
+      <div class="imagem-mapa">
+        <iframe src="${animal.maps}" width="600" height="450" style="border-radius:20px;border:solid 2px rgb(6, 95, 70);" border-radius"20px" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="legenda-mapa">Mapa de distribuição ${animal.nome}</p>
+      </div>
+    </div>
+  </div>
+</section>
             <section class="ameaca-secao">
               <div class="ameaca-lista">
 
@@ -115,17 +167,9 @@
                 </div>
                 </div>
                 `).join('')}
-                
-            <p><strong>Localização:</strong> ${animal.area_ocorrencia.localizacao}</p>
-            <p><strong>Habitat:</strong> ${animal.area_ocorrencia.habitat}</p>
-            <p><strong>Descrição:</strong> ${animal.descricao.desc_basica}</p>
-            <p><strong>Características Físicas:</strong> ${animal.descricao.caracteristicas_fisicas}</p>
-            <p><strong>Comportamento:</strong> ${animal.descricao.comportamento}</p>
-            <h3>Esforços de Conservação</h3>
-            <p><strong>Proteção do Habitat:</strong> ${animal.esforcos_conservacao.protecao_habitat}</p>
-            <p><strong>Combate à Caça:</strong> ${animal.esforcos_conservacao.combate_caca}</p>
               </div>
             </section>
+            
           `;
 
           container.appendChild(div);
@@ -138,6 +182,8 @@
       document.getElementById("listaAnimais").innerHTML = "<p>ID do animal não fornecido na URL.</p>";
     }
   </script>
+  
+
   <div id="footer1"></div>
 </body>
 <script>

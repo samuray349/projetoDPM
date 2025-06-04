@@ -370,17 +370,7 @@ header{
 
 
 
-@keyframes float {
-	0% {
-	  transform: translateY(0px);
-	}
-	50% {
-	  transform: translateY(-10px);
-	}
-	100% {
-	  transform: translateY(0px);
-	}
-  }
+
 
   
 .lista {
@@ -830,6 +820,7 @@ i:hover{
   display: block;
   width: 500px;
   height: auto;
+  border-radius: 10px;
 }
 
 /* Características */
@@ -859,9 +850,13 @@ i:hover{
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid #064e3b;
+  transition: transform 0.3s ease-in-out;
 }
-
+.cartao-caracteristica:hover{
+  transform: translateY(-5px);
+}
 .icone-circulo {
   width: 48px;
   height: 48px;
@@ -902,3 +897,202 @@ i:hover{
     justify-content: center;
   }
 }
+.secao-lince,
+.secao-habitat,
+.secao-conservacao {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+}
+
+.container-info {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo-secao {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+.grade-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.cartao {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+}
+
+.icone-topo {
+  font-size: 1.8rem;
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+/* Cores temáticas por categoria */
+.cartao-fisico { border-left-color: #22d3ee; }
+.cartao-comportamento { border-left-color: #facc15; }
+.cartao-localizacao { border-left-color: #818cf8; }
+.cartao-habitat { border-left-color: #4ade80; }
+.cartao-habitat-protecao { border-left-color: #34d399; }
+.cartao-caca { border-left-color: #f87171; }
+
+.titulo-cartao {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #064e3b;
+}
+
+.cartao p {
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.secao-animal {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+}
+
+.container-animal {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-secao {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+.grade-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cartao-animal {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  border: 2px solid #065f46;
+}
+
+.cartao-animal h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.cartao-animal p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.cartao-animal ul {
+  padding-left: 1.2rem;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.icone-verde {
+  color: #059669;
+  font-size: 1.5rem;
+  margin-right: 6px;
+  animation: piscar 3s ease-in-out infinite;
+}
+
+.cartao-mapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.texto-mapa {
+  flex: 1 1 400px;
+}
+
+.texto-mapa .subtitulo {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.imagem-mapa {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.imagem-mapa img {
+  max-width: 100%;
+  border: 2px solid #065f46;
+  border-radius: 8px;
+}
+
+.legenda-mapa {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-top: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cartao-mapa {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-mapa {
+    text-align: left;
+  }
+
+  .imagem-mapa {
+    text-align: center;
+  }
+}
+@keyframes float {
+	0% {
+	  transform: translateY(0px);
+	}
+	50% {
+	  transform: translateY(-10px);
+	}
+	100% {
+	  transform: translateY(0px);
+	}
+  }
+  @keyframes piscar {
+	0% {
+	  color: #059669;
+	}
+	50% {
+	  color: #043d01;
+	}
+	100% {
+	  color: #059669;
+	}
+  }
