@@ -141,13 +141,17 @@
         </ul>
       </div>
       <div class="imagem-mapa">
-        <iframe src="${animal.maps}"  max-width="600" max-height="450" style="border-radius:20px;border:solid 2px rgb(6, 95, 70);width: 500px;height: 300px;" border-radius"20px" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="iframe-responsivo">
+          <iframe src="${animal.maps}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <p class="legenda-mapa">Mapa de distribuição ${animal.nome}</p>
       </div>
     </div>
   </div>
 </section>
+
             <section class="ameaca-secao">
+              <h2 class="titulo-caracteristicas">Ameaças à sobrevivência</h2>
               <div class="ameaca-lista">
 
                 ${animal.ameacas_sobrevivencia.map(a => `
