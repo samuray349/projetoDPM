@@ -512,6 +512,8 @@ i:hover{
     width: 320px;
     transition: transform 0.3s;
     color: #1e293b;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .ameaca-cartao:hover {
