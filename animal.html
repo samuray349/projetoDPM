@@ -58,8 +58,8 @@
                     ${animal.descricao.desc_basica}
                   </p>
                   <div class="botoes-destaque">
-                    <a href="#" class="botao primario"><i class="fas fa-book-open"></i> Conheça outros animais</a>
-                    <a href="#" class="botao secundario"><i class="fas fa-seedling"></i> Contribuir</a>
+                    <a href="index.html#animais" class="botao primario"><i class="fas fa-book-open"></i> Conheça outros animais</a>
+                    <a href="index.html#doar" class="botao secundario"><i class="fas fa-seedling"></i> Contribuir</a>
                   </div>
                 </div>
 
@@ -179,11 +179,10 @@
           container.appendChild(div);
         })
         .catch(error => {
-          console.error("Erro ao buscar dados:", error);
-          document.getElementById("listaAnimais").innerHTML = "<p>Erro ao carregar os dados.</p>";
+          document.getElementById("listaAnimais").innerHTML = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
         });
     } else {
-      document.getElementById("listaAnimais").innerHTML = "<p>ID do animal não fornecido na URL.</p>";
+      document.getElementById("listaAnimais").innerHTML = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
     }
   </script>
   
@@ -191,11 +190,17 @@
   <div id="footer1"></div>
 </body>
 <script>
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.menu-nao-flex');
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.menu-nao-flex');
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+      if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+        });
+      }
+    }, 500);
   });
 </script>
 </html>
