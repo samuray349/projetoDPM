@@ -38,8 +38,7 @@
         .then(animal => {
           const container = document.getElementById("listaAnimais");
           if (!animal) {
-            document.body.innerHTML='';
-          document.body.innerHTMLL = '<div class="centro"><div class="caixa"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+            window.location.replace("index.html");
             return;
           }
 
@@ -47,8 +46,6 @@
           div.className = "animal";
 
           div.innerHTML = `
-
-
             <section class="secao-destaque">
               <div class="conteudo-destaque">
                 <div class="texto-destaque">
@@ -174,12 +171,12 @@
         })
         .catch(error => {
           document.body.innerHTML = '';
-          document.body.innerHTMLL = '<div class="centro"><div class="caixa-erro"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+          document.body.innerHTMLL = '<div class="centro"><div class="caixa-erro"><h1>Manutenção</h1><p>Ocorreu um erro inesperado<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
           document.write('<script type="text/undefined">');
         });
     } else {
       document.body.innerHTML = '';
-      document.body.innerHTML = '<div class="centro"><div class="caixa-erro"><h1>Manutenção</h1><p>A plataforma encontra-se temporariamente em manutenção.<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
+      document.body.innerHTML = '<div class="centro"><div class="caixa-erro"><h1>Manutenção</h1><p>Ocorreu um erro inesperado<br><a href="index.html">Voltar para a página principal</a></p></div></div>';
       document.write('<script type="text/undefined">');
     }
   </script>
