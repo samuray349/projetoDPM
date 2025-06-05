@@ -1097,7 +1097,6 @@ i:hover{
   width: 100%;
   padding-bottom: 56.25%; 
   height: 0;
-  height: 50px;
   overflow: hidden;
   border-radius: 16px;
   border: 2px solid #065f46;
@@ -1154,3 +1153,9 @@ i:hover{
     .caixa-erro a:hover {
       text-decoration: underline;
     }
+    @media (max-width: 768px) {
+  .iframe-responsivo {
+    max-width: 100%;
+    padding-bottom: 75%; /* mais alto em telas menores */
+  }
+}
